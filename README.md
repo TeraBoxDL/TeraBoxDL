@@ -1,29 +1,23 @@
-# 📦 terabox-downloader
+# TeraDL - CLI Tool for Downloading Videos from TeraBox
 
-A CLI tool to download TeraBox videos by extracting and combining M3U8 TS segments into a single MP4 file.
+TeraDL is a command-line tool that allows you to download video files from [TeraBox](https://terabox.com) using a shared link.  
+It works similarly to `yt-dlp` but is focused on TeraBox’s structure.
 
----
+## 🚀 Features
 
-## ⚙️ Features
-
-- Fetches 480p M3U8 stream from a TeraBox share URL
-- Downloads `.ts` segments with progress bars
-- Automatically combines `.ts` segments into a final MP4 using FFmpeg
-- Fully command-line — no server or GUI needed
-
----
-
-## 🧱 Requirements
-
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [FFmpeg](https://ffmpeg.org/) installed and accessible from your terminal
+- Download video files from TeraBox
+- Automatically parses download links
+- CLI support
+- No login required
+- Built using Node.js
 
 ---
 
-## 📦 Installation (via `git clone`)
+## 📦 Installation
+
+Clone the repo:
 
 ```bash
-git clone https://github.com/yourusername/terabox-downloader.git
-cd terabox-downloader
+git clone https://github.com/TeraDL/TeraDL.git
+cd TeraDL
 npm install
-npm link
