@@ -18,6 +18,8 @@ It works similarly to `yt-dlp` but is focused on TeraBox’s structure.
 Clone the repo:
 
 ```bash
-git clone https://github.com/TeraDL/TeraDL.git
-cd TeraDL
-npm install
+npm install teradl
+```
+```bash
+teradl https://terabox.com/your-terabox-url
+
