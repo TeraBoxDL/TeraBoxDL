@@ -1,0 +1,33 @@
+name: Publish to npm
+
+on:
+  push:
+    branches:
+      - main  # or 'master', depending on your branch name
+    paths:
+      - 'package.json'
+      - 'index.js'
+      - '**.ts'  # optional
+      - '**.js'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # or your preferred version
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
